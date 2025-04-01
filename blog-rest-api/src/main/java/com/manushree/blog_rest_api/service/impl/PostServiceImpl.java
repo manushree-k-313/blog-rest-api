@@ -11,7 +11,6 @@ import java.util.List;
 
 @Service
 public class PostServiceImpl implements PostService {
-
     @Autowired
     private PostRepository postRepository;
 
@@ -22,9 +21,10 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post getPostById(Long id) {
-        return postRepository
+        Post post = postRepository
                 .findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("post", "postId", id));
+        return post;
     }
 
     @Override

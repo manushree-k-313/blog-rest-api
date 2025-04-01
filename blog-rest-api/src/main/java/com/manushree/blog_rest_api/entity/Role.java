@@ -1,6 +1,7 @@
 package com.manushree.blog_rest_api.entity;
+
 import jakarta.persistence.*;
-        import lombok.AllArgsConstructor;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -42,4 +43,3 @@ public class Role {
         this.name = name;
     }
 }
-
